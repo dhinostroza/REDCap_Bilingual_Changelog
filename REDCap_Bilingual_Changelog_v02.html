@@ -1,0 +1,268 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>REDCap Changelog</title>
+
+    <!-- HTML5 semántico
+    	 <link rel="exhibit-data" type="application/jsonp" href="" data-ex-converter="googleSpreadsheets">
+
+       Algunos derechos reservados.
+       Contacto: Dr. med. Daniel Hinostroza C.
+       www.pharmamedservices.com
+       info@pharmamedservices.com
+-->
+<!--
+	En data-ex-properties hay que poner todos los nombres de los campos en orden o se altera la Tabla. La primera columna no puede quedar en blanco. La primera columna tiene que ser label.
+-->
+    <link href="https://docs.google.com/spreadsheets/d/19YwsY27G6t9qm0AtUFwUMwnY4rtdBFGdI8q_NEubkSQ/pub?gid=1024787179&single=true&output=csv" type="text/csv" rel="exhibit/data" data-ex-properties="label,Flavor,Version,Publicado,Group,Grupo,Keywords,Palabras_clave,Statement,Enunciado" data-ex-has-column-titles="true"/>
+    <link href="https://docs.google.com/spreadsheets/d/19YwsY27G6t9qm0AtUFwUMwnY4rtdBFGdI8q_NEubkSQ/pub?gid=0&single=true&output=csv" type="text/csv" rel="exhibit/data" data-ex-properties="label,Flavor,Version,Publicado,Group,Grupo,Keywords,Palabras_clave,Statement,Enunciado" data-ex-has-column-titles="true"/>
+    <script src="http://api.simile-widgets.org/exhibit/STABLE/exhibit-api.js"></script>
+    <script src="http://api.simile-widgets.org/exhibit/STABLE/extensions/time/time-extension.js" type="text/javascript"></script> 
+  <!--
+    <script src="http://api.simile-widgets.org/exhibit/3.1.2rc2/extensions/map/map-extension.js"></script>
+    -->
+    <script type="text/javascript">
+var zebraStyler = function(item, database, tr) {
+if (tr.rowIndex % 2) {
+tr.style.background = '#eee';
+} else {
+tr.style.background = '#ccc';
+}
+}
+</script>
+    <style>
+        body {
+            font-family:    Tahoma, Arial, sans serif;
+            font-size:      8pt;
+            margin:         0;
+            padding:        0;
+            background:     white;
+        }
+        table { font-size: 100%; }
+        tr { vertical-align: top; }
+
+        #content { background: white; width: 99%; }
+        #title-panel { padding: 0.25in 0.5in; }
+        #top-panels {
+            padding:        0.5em 0.5in;
+            border-top:     1px solid #BCB79E;
+            border-bottom:  1px solid #BCB79E;
+            background:     #FBF4D3;
+        }
+    	<!-- Los class empiezan con un punto y luego el nombre de la clase. -->
+        .exhibit-tileView-body { list-style: none; }
+        .exhibit-collectionView-group-count { display: none; }
+        
+        table.documento {
+            border:     1px solid #ddd;
+            page-break-after: always;
+        }
+        div.name {
+            font-weight: bold;
+            font-size:   100%;
+        }
+        div.h2 {
+            font-family: Tahoma, Arial, sans serif;
+            font-weight: bold;
+            font-size:   105%;
+        }
+        div.centrado {
+            font-family: Tahoma, Arial, sans serif;
+            font-weight: bold;
+            font-size:   105%;
+            text-align: center;
+        }
+        div.izq {
+            font-family: Tahoma, Arial, sans serif;
+            font-weight: bold;
+            font-size:   110%;
+            text-align: left;
+        }
+        .relationship {
+            color:  #888;
+        }
+        div.documento-thumbnail {
+            float:      left;
+            width:      13em;
+            height:     10em;
+            border:     1px solid #BCB79E;
+            background: #F0FFF0;
+            padding:    1em;
+            margin:     0.5em;
+            text-align: center;
+        }
+        div.documento-timeline-lens {
+            padding:    1em;
+            text-align: left;
+        }
+    </style>
+	<!-- 
+    <script type="text/javascript">
+        function pendientRowStyler(itemID, database, tr, rowIndex) {
+            var pendiente = database.getObject(itemID, "pendiente");
+            if (pendiente == "yes") {
+                tr.style.backgroundColor = "#f88";
+            }
+        }
+    </script>
+    -->
+</head> 
+
+<body>
+    <h2 align="center">REDCap Changelog/Control de cambios de REDCap</h2>
+       	 
+    <div id="content">
+    
+    <div id="title-panel">
+	       <table width="25%">
+	       <tr><td><b> Search/Buscar: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </b>
+			 <div data-ex-role="facet" data-ex-facet-class="TextSearch"></div></td>
+           </tr>
+           </table>
+    </div>
+    
+    <div id="top-panels">
+        <table width="100%">
+        <tr>
+            <td width="3%"><div data-ex-role="facet" data-ex-expression=".Flavor" data-ex-facet-label="LTS/Standard"></div></td>
+            <td width="3%"><div data-ex-role="facet" data-ex-expression=".Version" data-ex-facet-label="Version" data-ex-sort-direction="reverse"></div></td>
+            <td width="4%"><div data-ex-role="facet" data-ex-expression=".Publicado" data-ex-facet-label="Date/Fecha" data-ex-sort-direction="reverse"></div></td>
+            <td width="6%"><div data-ex-role="facet" data-ex-expression=".Group" data-ex-facet-label="Group" data-ex-sort-mode="count"></div></td>
+            <td width="8%"><div data-ex-role="facet" data-ex-expression=".Grupo" data-ex-facet-label="Grupo" data-ex-sort-mode="count"></div></td>
+            <td width="8%"><div data-ex-role="facet" data-ex-expression=".Keywords" data-ex-facet-label="Keywords" data-ex-sort-mode="count"></div></td>
+            <td width="8%"><div data-ex-role="facet" data-ex-expression=".Palabras_clave" data-ex-facet-label="Palabras clave" data-ex-sort-mode="count"></div></td>
+
+        <!--  
+            <td width="4%"><div data-ex-role="facet" data-ex-expression=".Palabras_clave" data-ex-facet-label="Palabras clave" data-ex-show-missing="false"></div></td>
+        -->
+        </tr>
+        </table>
+    </div>
+        
+    <div id="exhibit-control-panel" data-ex-role="viewpanel"></div>
+        
+        <!--  
+        Burbuja 
+        -->
+<div class="map-lens" 
+    data-ex-role="lens" style="display: none;">
+    <strong><span data-ex-content=".label"></span></strong> 
+        <div data-ex-if-exists=".Flavor" class="year"><b> LTS/Standard: </b><span data-ex-content=".Flavor"></span></div> 
+        <div data-ex-if-exists=".Version" class="year"><b> Version: </b><span data-ex-content=".Version"></span></div>
+        <div data-ex-if-exists=".Publicado" class="year"><b> Date/Fecha: </b><span data-ex-content=".Publicado"></span></div>
+        <div data-ex-if-exists=".Group" class="year"><b> Group: </b><span data-ex-content=".Group"></span></div> 
+        <div data-ex-if-exists=".Grupo" class="year"><b> Grupo: </b><span data-ex-content=".Grupo"></span></div> 
+        <div data-ex-if-exists=".Keywords" class="year"><b> Keywords: </b><span data-ex-content=".Keywords" data-ex-show-missing="false"></span></div> 
+        <div data-ex-if-exists=".Palabras_clave" class="year"><b> Palabras clave: </b><span data-ex-content=".Palabras_clave" data-ex-show-missing="false"></span></div> 
+        <div data-ex-if-exists=".Statement" class="year"><b> Statement: </b><span data-ex-content=".Statement"></span></div> 
+        <div data-ex-if-exists=".Enunciado" class="year"><b> Enunciado: </b><span data-ex-content=".Enunciado"></span></div> 
+</div>
+        <!-- 
+        Esto es lo que se verá en Ficha.  Cambié los td width de % a valores fijos y ahora me reconoce el ancho de la página. Go figure...
+         -->
+    <div data-ex-role="viewPanel">
+        <table data-ex-role="lens" class="documento" style="display: none;">
+        <tr>
+        <td width="100" style="background-color: #fdfce6;"><div><b> Components: </b></div></td>
+        <td width="900"><div data-ex-if-exists=".Flavor" class="year"><b> LTS/Standard: </b><span data-ex-content=".Flavor"></span></div> 
+        <div data-ex-if-exists=".Version" class="year"><b> Version: </b><span data-ex-content=".Version"></span></div> 
+        <div data-ex-if-exists=".Publicado" class="year"><b> Date/Fecha: </b><span data-ex-content=".Publicado"></span></div> 
+        <div data-ex-if-exists=".Group" class="year"><b> Group: </b><span data-ex-content=".Group"></span></div>
+        <div data-ex-if-exists=".Grupo" class="year"><b> Grupo: </b><span data-ex-content=".Grupo"></span></div>
+        <div data-ex-if-exists=".Keywords" class="year"><b> Keywords: </b><span data-ex-content=".Keywords"></span></div> 
+        <div data-ex-if-exists=".Palabras_clave" class="year"><b> Palabras clave: </b><span data-ex-content=".Palabras_clave"></span></div> 
+        </td>
+         </tr>
+         <tr>
+            <td width="100" style="background-color: #f0ddbf;"><div><b>Statement: </b></div></td>
+            <td width="400"><div data-ex-if-exists=".Statement"><b></b><span data-ex-content=".Statement" class="name"></span></div></td>
+         </tr>
+         <tr>
+            <td width="100" style="background-color: #f0ddbf;"><div><b>Enunciado: </b></div></td>
+            <td width="400"><div data-ex-if-exists=".Enunciado"><b></b><span data-ex-content=".Enunciado" class="name"></span></div></td>
+         </tr>
+         </tr>
+        </table>
+        <!-- 
+        Resumen
+
+        <div data-ex-role="view"
+            data-ex-viewClass="Thumbnail"
+            data-ex-label="Resumen"
+            data-ex-show-all="false"
+            data-ex-orders=".Fecha_toma_muestra"
+            data-ex-possibleOrders=".Fecha_toma_muestra, .label, .Numero_orden_datalab">
+            <div data-ex-role="exhibit-lens" class="documento-thumbnail" style="display: none;">
+                <div><span data-ex-content=".Apellidos_nombres"></span></div>
+                <div><span data-ex-content=".Fecha_toma_muestra" class="discipline"></span></div>
+                <div><span data-ex-content=".Procedencia_servicio" class="discipline"></span></div>
+                <div><span data-ex-content=".Estado_de_muestra" class="discipline"></span></div>
+                <div><span data-ex-content=".Tipo_de_examen" class="discipline"></span></div>
+                <div><span data-ex-content=".Tipo_de_muestra" class="discipline"></span></div>
+            </div>
+        </div>
+         -->
+        
+         <!--
+          Ficha
+         -->
+        <div data-ex-role="view"
+            data-ex-label="Ficha"
+            data-ex-view-class="Tile"
+            data-ex-direction="ascending"
+            data-ex-show-all="false"
+            data-ex-abbreviated-count="20"
+            data-ex-orders=".label, .Flavor, .Version, .Group, .Grupo, .Keywords, .Palabras_clave, .Statement, .Enunciado"
+            data-ex-possible-orders=".label, .Flavor, .Version, .Group, .Grupo, .Keywords, .Palabras_clave, .Statement, .Enunciado">
+            </div>
+	<!-- 
+		Tabla abajo
+    -->
+<div 
+	data-ex-role="exhibit-view" 
+	data-ex-row-styler="zebraStyler" 
+	data-ex-view-class="Exhibit.TabularView" 
+	data-ex-label="Tabla" 
+	data-ex-columns=".label, .Flavor, .Version, .Group, .Grupo, .Keywords, .Palabras_clave, .Statement, .Enunciado" 
+	data-ex-column-labels="Label, Flavor, Version, Group, Grupo, Keywords, Palabras clave, Statement, Enunciado" 
+    data-ex-sort-descending="true"
+    data-ex-show-toolbox="false"
+    data-ex-show-missing="false">
+</div>
+
+        <!-- Pestaña con la línea de tiempo
+
+        <div data-ex-role="view"
+            data-ex-view-class="Timeline"
+            data-ex-label="Línea de tiempo"
+            data-ex-start=".Fecha_ingreso"
+            data-ex-end=".Fecha_finalizacion"
+            data-ex-top-band-unit="month"
+   			data-ex-bottom-band-unit="year"
+            data-ex-top-band-pixels-per-unit="100"
+            data-ex-bottom-band-pixels-per-unit="150"
+            data-ex-color-key=".Tipo_1"
+            data-ex-bubble-width="300"
+            data-ex-bubble-height="250">
+
+            <div data-ex-role="exhibit-lens" class="documento-timeline-lens" style="display: none;">
+        -->
+                <!-- <img data-ex-src-content=".imageURL" /> -->
+        <!--
+                <div><b>Código: </b><span data-ex-content=".label"></span></div>
+                <div><b>Fecha: </b><span data-ex-content=".Fecha_ingreso" class="discipline"></span> </div>
+                <div><b>Apellidos y nombres: </b><span data-ex-content=".Apellidos_y_nombres"></span></div>
+                <div><b>Correo electrónico: </b><span data-ex-content=".Correo_electronico" class="discipline"></span> </div>
+                <div><b>Teléfono: </b><span data-ex-content=".Telefono" class="discipline"></span></div>
+                <div><b>Cédula: </b><span data-ex-content=".Cedula" class="discipline"></span> </div>
+                <div><b>Cargo: </b><span data-ex-content=".Cargo" class="discipline"></span> </div>
+                <div><b>Tipo 1: </b><span data-ex-content=".Tipo_1" class="discipline"></span> </div>
+                <div><b>Tipo 2: </b><span data-ex-content=".Tipo_2" class="discipline"></span> </div>
+                </div>
+            </div>
+        </div>
+        -->
+    </div>
+</div>
+</body>
+</html>
